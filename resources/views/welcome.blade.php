@@ -20,6 +20,22 @@
         <main>
 
             <h1>ciao</h1>
+
+            <div class="container">
+                <div class="row row-cols-4">
+
+                    @forelse ($movies as $movie)
+                    <div class="col">
+                        <div class="card">
+                                <div>Titolo: {{$movie->title}}</div>
+                                
+                            </div>
+                        </div>
+                        @empty
+                            <p>Nessun film disponibile</p>
+                        @endforelse
+                </div>
+            </div>
         </main>
 
 </body>
